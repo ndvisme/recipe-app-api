@@ -23,6 +23,6 @@ class ModelTests(TestCase):
             ['tesT3@example.COM', 'tesT3@example.com']
         ]
 
-        for recieved, expected in sample_emails:
-            user = get_user_model().objects.create_user(email=recieved, password='sample123')
+        for received, expected in sample_emails:
+            user = get_user_model().objects.create_user(email=received, password='sample123')
             self.assertEqual(user.email, expected)
